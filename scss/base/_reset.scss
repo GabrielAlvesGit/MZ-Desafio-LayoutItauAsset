@@ -12,3 +12,19 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: .45s all;
+  opacity: 1;
+
+  &:hover {
+    transition: .35s all;
+    opacity: .9;
+  }
+}
+
