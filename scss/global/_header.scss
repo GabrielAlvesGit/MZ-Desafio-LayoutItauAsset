@@ -1,13 +1,14 @@
-.header {
-  width: 100%;
-  background-color: $primary-color-black;
+.header { 
 
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__top{
+    width: 100%;
+    background-color: $primary-color-black;
 
     &__left {
 
@@ -18,7 +19,7 @@
 
           &__link{
             display: block;
-            color: $secondary-color-white;
+            color: $primary-color-white;
             font-size: 16px;
             font-style: normal;
             font-weight: 700;
@@ -28,6 +29,10 @@
             border-left: 1px solid $tertiary-color-white;
 
             &:hover{
+              background-color: $primary-color-orange;
+            }
+
+            &.active{
               background-color: $primary-color-orange;
             }
           }
@@ -43,6 +48,183 @@
 
       &__list {
         display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__item {
+          cursor: pointer;  
+
+          &__acess{
+            display: flex;
+
+            &__text {
+              color: $tertiary-color-white;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 150%;
+              
+              &:nth-child(1){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                &::after {
+                  content: '';
+                  display: block;
+                  width: 1px;
+                  height: 22px;
+                  background-color: $tertiary-color-white;
+                  margin: 0 7px 0 7px;
+                }
+              }
+
+              &:hover{
+                transition: .35s all;
+                opacity: 0.4;
+              }
+            }
+          }
+
+          &__accessibility{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            &__item {
+              display: flex;
+              align-items: center;
+              color: $tertiary-color-white;
+              text-align: center;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 150%;
+              gap: 9px;
+
+              > svg {
+                display: block;
+              }
+
+              &:hover{
+                transition: .35s all;
+                opacity: 0.4;
+              }
+            }
+          }
+
+          &__languages {
+   
+            &__text {
+              display: flex;
+              align-items: center;
+              color: $tertiary-color-white;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: normal;
+              padding: 10px;
+              gap: 8px;
+
+              &.en{
+                display: none;
+
+                &.active{
+                  display: flex;
+                }
+              }
+
+              &.pt{
+                display: none;
+                &.active{
+                  display: flex;
+                }
+              }
+  
+              > svg {
+                display: block;
+              }
+
+              &:hover {
+                border-radius: 4px;
+                background-color: $primary-color-orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom{
+     width: 100%;
+     background-color: $primary-color-white;
+     padding: 26px 00 26px 0px;
+
+     >.container {
+   
+     }
+
+     &__left {
+
+      &__img {
+        width: 155.105px; 
+        height: 28px;
+      }
+     }
+
+     &__right {
+     
+      &__navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+ 
+        &__nav {
+
+          &__list {
+            display: flex;
+            gap: 35px;
+
+            &__item {
+
+              &__link {
+                color: $primary-color-black;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: lowercase;
+
+                &:hover {
+                  opacity: .8;
+                  transition: .35s all;
+                }
+              }
+            }
+          }
+
+        }
+
+        &__form {
+          position: relative;
+          min-width: 184px;
+          height: 43px;
+
+          &__input {
+            position: absolute;
+            width: 184px;
+            padding: 12px 34px 13px 59px ;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 10px;
+            background: #EDEDED;  
+          }
+
+          &__btn {
+            position: absolute;
+            left: 25px;
+            top: 12px;
+          }
+        }
       }
     }
   }

@@ -28,3 +28,20 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+input,
+input:focus {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
