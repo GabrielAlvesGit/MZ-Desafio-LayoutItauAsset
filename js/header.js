@@ -13,15 +13,17 @@ topMenuItems.forEach(topMenuItem => {
 function toggleLanguages () {
   const languagesPT = document.querySelector('.js-active-pt'); 
   const languagesEN = document.querySelector('.js-active-en'); 
+  languagesEN.classList.add('active');
+
+  languagesEN.addEventListener('click', () => {
+    languagesPT.classList.add('active');
+    languagesEN.classList.remove('active');
+  });
 
   languagesPT.addEventListener('click', () => {
     languagesPT.classList.remove('active');
     languagesEN.classList.add('active');
   });
   
-  languagesEN.addEventListener('click', () => {
-    languagesPT.classList.add('active');
-    languagesEN.classList.remove('active');
-  });
 }
 toggleLanguages();

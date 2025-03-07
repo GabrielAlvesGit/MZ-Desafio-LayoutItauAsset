@@ -3,5 +3,8 @@
 @import './base/reset';
 @import './base/grid';
 
-// Pages
+// Global
 @import './global/header';
+
+// Pages
+@import './pages/banner';

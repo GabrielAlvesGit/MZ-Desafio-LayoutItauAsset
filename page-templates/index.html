@@ -58,13 +58,13 @@
 
             <li class="header__top__right__list__item">
               <ul class="header__top__right__list__item__languages">
-                <li class="header__top__right__list__item__languages__text pt js-active-en">
+                <li class="header__top__right__list__item__languages__text en js-active-en">
                   EN 
                   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                     <path d="M9 1L4.80198 5L1 1" stroke="white"/>
                   </svg>
                 </li>
-                <li class="header__top__right__list__item__languages__text en js-active-pt">
+                <li class="header__top__right__list__item__languages__text pt js-active-pt">
                   PT
                   <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none">
                     <path d="M9 1L4.80198 5L1 1" stroke="white"/>
@@ -121,17 +121,55 @@
                   </svg>
               </button>
             </form>
-
-            <div class="header__bottom__right__navigation__menu">
-              <img class="header__bottom__right__navigation__menu__open" src="img/icon/icon-menu.png" alt="open" />
-              <img class="header__bottom__right__navigation__menu__close" src="img/icon/icon-menu.png" alt="close" />
-            </div>
+          </div>
+          
+          <div class="header__bottom__right__menu">
+            <img class="header__bottom__right__menu__open" src="img/icon/icon-menu.png" alt="open" />
+            <img class="header__bottom__right__menu__close" src="img/icon/icon-menu.png" alt="close" />
           </div>
         </div>
       </div>
     </div>
   </header>
 
+  <main class="pgHome">
+    <section class="pgHome__banners">
+
+      <div class="pgHome__banners__slicks">
+        <div class="pgHome__banners__slicks__slick">
+          <img class="pgHome__banners__slicks__slick__img js-active-slick" src="/img/banner2.png" alt="banner" />
+        </div>
+
+        <div class="pgHome__banners__slicks__slick">
+          <img class="pgHome__banners__slicks__slick__img js-active-slick" src="/img/banner.png" alt="banner" />
+        </div>
+      </div>
+
+      <div class="pgHome__banners__contents js-contet">
+        <div class="container">       
+          <div class="pgHome__banners__contents__content">
+            <h1 class="pgHome__banners__contents__content__title">Os melhores resultados com os menores riscos</h1>
+
+            <div class="pgHome__banners__contents__content__dots">
+              <div class="pgHome__banners__contents__content__dots__dot js-dot"></div>
+              <div class="pgHome__banners__contents__content__dots__dot js-dot"></div>
+              <div class="pgHome__banners__contents__content__dots__dot js-dot"></div>
+              <div class="pgHome__banners__contents__content__dots__dot js-dot"></div>
+            </div>
+
+            <a class="pgHome__banners__contents__content__link" href="#">
+              Conheça a nossa prateleira de fundos de renda fixa
+              <span class="pgHome__banners__contents__content__link__circle">
+                <img class="pgHome__banners__contents__content__link__circle__icon" src="/img/icon/arrow-right.png" alt="arrow" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
   <script src="/js/header.js"></script>
+  <script src="/js/banner.js"></script>
 </body>
 </html>

@@ -113,6 +113,7 @@
           }
 
           &__languages {
+            position: relative;
    
             &__text {
               display: flex;
@@ -123,10 +124,10 @@
               line-height: normal;
               padding: 10px;
               gap: 8px;
-
+            
               &.en{
                 display: none;
-
+                
                 &.active{
                   display: flex;
                 }
@@ -134,6 +135,7 @@
 
               &.pt{
                 display: none;
+                
                 &.active{
                   display: flex;
                 }
@@ -224,8 +226,87 @@
             left: 25px;
             top: 12px;
           }
+        } 
+      }
+
+      &__menu {
+        display: none;
+
+        &__open{
+
+        }
+
+        &__open{
+          
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header {
+    &__bottom{
+      width: 100%;
+      background-color: $primary-color-white;
+      padding: 26px 00 26px 0px;
+ 
+      >.container {
+    
+      }
+ 
+      &__left {
+ 
+       &__img {
+         width: 155.105px; 
+         height: 28px;
+       }
+      }
+ 
+      &__right {
+      
+       &__navigation {
+        display: none;
+  
+         &__nav {
+  
+           &__list {
+      
+             &__item {
+ 
+               &__link {
+    
+               }
+             }
+           }
+ 
+         }
+ 
+         &__form {
+          
+ 
+           &__input {
+            
+           }
+ 
+           &__btn {
+   
+           }
+         }
+       }
+
+       &__menu {
+          display: flex;
+           
+        &__open{
+
+        }
+
+        &__open{
+          
+        }
+      }
+     }
+   }
   }
 }
