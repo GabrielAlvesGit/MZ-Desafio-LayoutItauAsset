@@ -4,7 +4,7 @@
     position: absolute;
     width: 100%;
     height: 672px;
-
+   
     &__slicks{
   
       &__slick {
@@ -13,6 +13,15 @@
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        transition: .78s all;
+        //transform: translate3d(-100%, 0px, 0px);
+        opacity: 0;
+
+        &.active {
+          //transform: translate3d(0px, 0px, 0px);
+          transition: .5s all;
+          opacity: 1;
+        }
 
         &__img {
           width: 100%;
@@ -38,12 +47,23 @@
         width: 50%;
         padding-top: 103px;
 
-        &__title {
-          color: $secondary-color-white;
-          font-size: 40px;
-          font-weight: 700;
-          line-height: 132%;
-          text-transform: lowercase;
+        &__titles{
+          position: relative;
+          height: 106px;
+
+          &__title {
+            position: absolute;
+            color: $secondary-color-white;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 132%;
+            text-transform: lowercase;
+            opacity: 0;
+  
+            &.active {
+              opacity: 1;
+            }
+          }
         }
 
         &__dots{
@@ -66,30 +86,39 @@
           }
         }
 
-        &__link {
-          display: flex;
-          align-items: center;
-          width: 411px;
-          height: 96px;
-          color: $secondary-color-white;
-          font-size: 20px;
-          font-weight: 700;
-          line-height: 140%; 
-          text-transform: lowercase;
-          padding: 20px 33px 20px 32px;
-          border-radius: 10px;
-          background: rgba(255, 255, 255, 0.15);
-          backdrop-filter: blur(7.5px);
-          gap: 29px;
+        &__links {
 
-          &__circle {
-            display: flex;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.70);
-            padding: 5px;
+          &__link {
+            position: absolute;
+            display: none;
+            align-items: center;
+            width: 411px;
+            height: 96px;
+            color: $secondary-color-white;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 140%; 
+            text-transform: lowercase;
+            padding: 20px 33px 20px 32px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(7.5px);
+            gap: 29px;
+           
 
-            &__icon {
-              width: 20px;
+            &.active {
+              display: flex;
+            }
+  
+            &__circle {
+              display: flex;
+              border-radius: 50%;
+              background-color: rgba(255, 255, 255, 0.70);
+              padding: 5px;
+  
+              &__icon {
+                width: 20px;
+              }
             }
           }
         }

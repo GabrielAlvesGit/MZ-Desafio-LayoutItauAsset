@@ -281,6 +281,12 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  transition: 0.78s all;
+  opacity: 0;
+}
+.pgHome__banners__slicks__slick.active {
+  transition: 0.5s all;
+  opacity: 1;
 }
 .pgHome__banners__slicks__slick__img {
   width: 100%;
@@ -302,12 +308,21 @@ button {
   width: 50%;
   padding-top: 103px;
 }
-.pgHome__banners__contents__content__title {
+.pgHome__banners__contents__content__titles {
+  position: relative;
+  height: 106px;
+}
+.pgHome__banners__contents__content__titles__title {
+  position: absolute;
   color: #FFF;
   font-size: 40px;
   font-weight: 700;
   line-height: 132%;
   text-transform: lowercase;
+  opacity: 0;
+}
+.pgHome__banners__contents__content__titles__title.active {
+  opacity: 1;
 }
 .pgHome__banners__contents__content__dots {
   display: flex;
@@ -326,8 +341,9 @@ button {
 .pgHome__banners__contents__content__dots__dot.active {
   background-color: #FFFFFF;
 }
-.pgHome__banners__contents__content__link {
-  display: flex;
+.pgHome__banners__contents__content__links__link {
+  position: absolute;
+  display: none;
   align-items: center;
   width: 411px;
   height: 96px;
@@ -342,13 +358,16 @@ button {
   backdrop-filter: blur(7.5px);
   gap: 29px;
 }
-.pgHome__banners__contents__content__link__circle {
+.pgHome__banners__contents__content__links__link.active {
+  display: flex;
+}
+.pgHome__banners__contents__content__links__link__circle {
   display: flex;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 5px;
 }
-.pgHome__banners__contents__content__link__circle__icon {
+.pgHome__banners__contents__content__links__link__circle__icon {
   width: 20px;
 }
 
