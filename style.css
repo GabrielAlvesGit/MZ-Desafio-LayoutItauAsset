@@ -26,7 +26,7 @@ a {
 }
 a:hover {
   transition: 0.35s all;
-  opacity: 0.9;
+  opacity: 0.4;
 }
 
 img {
@@ -220,6 +220,12 @@ button {
   display: flex;
   gap: 35px;
 }
+.header__bottom__right__navigation__nav__list__item {
+  position: relative;
+}
+.header__bottom__right__navigation__nav__list__item:hover .submenu {
+  opacity: 1;
+}
 .header__bottom__right__navigation__nav__list__item__link {
   color: #161F27;
   font-size: 18px;
@@ -230,6 +236,35 @@ button {
 .header__bottom__right__navigation__nav__list__item__link:hover {
   opacity: 0.8;
   transition: 0.35s all;
+}
+.header__bottom__right__navigation__nav__list__item .submenu {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  top: 152px;
+  width: 324px;
+  transform: translateY(-50%);
+  background-color: #161F27;
+  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+  padding: 10px 30px 10px;
+  z-index: 2;
+  column-gap: 64px;
+  transition: 0.35s all;
+  opacity: 0;
+}
+.header__bottom__right__navigation__nav__list__item .submenu__item {
+  flex: 30%;
+}
+.header__bottom__right__navigation__nav__list__item .submenu__item__link {
+  color: #FFF;
+  display: inline-block;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 230%;
+  width: 100%;
+  letter-spacing: -0.36px;
+  text-transform: lowercase;
 }
 .header__bottom__right__navigation__form {
   position: relative;
@@ -319,9 +354,11 @@ button {
   font-weight: 700;
   line-height: 132%;
   text-transform: lowercase;
+  transition: 0.78s all;
   opacity: 0;
 }
 .pgHome__banners__contents__content__titles__title.active {
+  transition: 0.5s all;
   opacity: 1;
 }
 .pgHome__banners__contents__content__dots {
@@ -341,9 +378,12 @@ button {
 .pgHome__banners__contents__content__dots__dot.active {
   background-color: #FFFFFF;
 }
+.pgHome__banners__contents__content__links:hover {
+  opacity: 0.8;
+}
 .pgHome__banners__contents__content__links__link {
   position: absolute;
-  display: none;
+  display: flex;
   align-items: center;
   width: 411px;
   height: 96px;
@@ -357,9 +397,15 @@ button {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(7.5px);
   gap: 29px;
+  transition: 0.78s all;
+  opacity: 0;
 }
 .pgHome__banners__contents__content__links__link.active {
-  display: flex;
+  transition: 0.5s all;
+  opacity: 1;
+}
+.pgHome__banners__contents__content__links__link:hover {
+  opacity: 1;
 }
 .pgHome__banners__contents__content__links__link__circle {
   display: flex;

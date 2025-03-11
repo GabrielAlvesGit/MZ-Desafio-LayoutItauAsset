@@ -58,9 +58,11 @@
             font-weight: 700;
             line-height: 132%;
             text-transform: lowercase;
+            transition: .78s all;
             opacity: 0;
   
             &.active {
+              transition: .5s all;
               opacity: 1;
             }
           }
@@ -88,9 +90,13 @@
 
         &__links {
 
+          &:hover{
+            opacity: .8;
+          }
+
           &__link {
             position: absolute;
-            display: none;
+            display: flex;
             align-items: center;
             width: 411px;
             height: 96px;
@@ -104,12 +110,18 @@
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(7.5px);
             gap: 29px;
+            transition: .78s all;
+            opacity: 0;
            
-
             &.active {
-              display: flex;
+              transition: .5s all;
+              opacity: 1;
             }
   
+            &:hover{
+              opacity: 1;
+            }
+
             &__circle {
               display: flex;
               border-radius: 50%;
