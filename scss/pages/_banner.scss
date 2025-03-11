@@ -1,7 +1,11 @@
 .pgHome{
-  
+  background: url(/img/background.png) no-repeat;
+  object-fit: cover;
+  background-size: 100% auto;
+  background-position: 100% 47%;
+
   &__banners{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 672px;
    
